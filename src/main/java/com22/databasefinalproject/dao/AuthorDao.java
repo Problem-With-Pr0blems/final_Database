@@ -12,7 +12,7 @@ public class AuthorDao {
 
     public void createTable() {
         String sql = """
-                CREATE TABLE IF NOT EXISTS authors (
+                CREATE TABLE IF NOT EXISTS author (
                     author_id SERIAL PRIMARY KEY,
                     author_full_name VARCHAR(255) NOT NULL
                 );
@@ -49,7 +49,7 @@ public class AuthorDao {
 
     public void insertAuthor(Author author) {
         String sql =
-                "INSERT  INTO author (author_full_name) VALUES (?)";
+                "INSERT INTO author (author_full_name) VALUES (?)";
         try (
                 Connection connection = ConnectionConfig.getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);

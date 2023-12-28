@@ -33,7 +33,7 @@ public class OrderDao {
         String sql = """
                 CREATE TABLE IF NOT EXISTS Book_Order (
                    book_id INTEGER REFERENCES book(book_id),
-                   order_id INTEGER REFERENCES orders(order_id),
+                   order_id INTEGER REFERENCES order(order_id),
                    PRIMARY KEY (book_id, order_id)
                );
                 """;

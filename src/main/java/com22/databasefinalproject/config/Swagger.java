@@ -12,18 +12,11 @@ import java.util.Collections;
 
 @Configuration
 public class Swagger {
-//    private static final String API_KEY = "Bearer Token";
+
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info().title("Database final project"));
     }
-//    public SecurityScheme apiKeySecuritySchema() {
-//        return new SecurityScheme()
-//                .name("Auth API")
-//                .description("Please put the token")
-//                .in(SecurityScheme.In.HEADER)
-//                .type(SecurityScheme.Type.HTTP)
-//                .scheme("Bearer");
-//    }
+
 }
